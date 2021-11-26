@@ -9,7 +9,7 @@ export class ButtonComponent {
   @Input() label: string;
 
   constructor() {
-    this.label = 'Add';
+    this.label = 'Remove';
   }
 
   public showMessage(): void {
