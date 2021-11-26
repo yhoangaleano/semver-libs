@@ -33,6 +33,7 @@
     "@types/jasmine": "~3.8.0",
     "@types/node": "^12.11.1",
     "commitizen": "^4.2.4",
+    "conventional-changelog-conventionalcommits": "^4.6.1",
     "cz-conventional-changelog": "^3.3.0",
     "husky": "^7.0.0",
     "jasmine-core": "~3.8.0",
