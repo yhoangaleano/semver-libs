@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.1.0](https://github.com/yohitan12/semver-libs/compare/input@3.0.1...input@3.1.0) (2021-11-26)
+
+
+### Bug Fixes
+
+* add style property ([52d1be0](https://github.com/yohitan12/semver-libs/commit/52d1be027a226d57846fe0c204cad1a9a25499bf))
+
+
+### Features
+
+* **input:** add content and label for input ([ff1647d](https://github.com/yohitan12/semver-libs/commit/ff1647d2bac6931032b02dcb07dac09e8494563e))
+
+
+
+
+
 ## [3.0.1](https://github.com/yohitan12/semver-libs/compare/input@3.0.0...input@3.0.1) (2021-11-26)
 
 
