@@ -1,13 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'lib-button',
   template: `
     <p>
-      Button Works!
+      Button Works! {{label}}
     </p>
   `,
   styles: [
   ]
 })
-export class ButtonComponent {}
+export class ButtonComponent {
+  @Input() label: string;
+
+  constructor() {
+    this.label = 'Add';
+  }
+}
