@@ -5,11 +5,12 @@
   "version": "independent",
   "command": {
     "publish": {
-      "conventionalCommits": true
+      "conventionalCommits": true,
+      "ignoreChanges": ["ignored-file", "*.md"],
+      "message": "chore(release): publish"
     },
     "version": {
-      "message": "chore(release): publish"
+      "message": "chore(build): generate new version"
     }
-  },
-  "ignoreChanges": ["**/__tests__/**", "**/*.test.ts"]
+  }
 }
