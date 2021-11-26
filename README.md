@@ -118,11 +118,10 @@ En este archivo encontramos toda la configuración de lerna y de la cual se basa
   "command": {
     "publish": {
       "conventionalCommits": true,
-      "ignoreChanges": ["ignored-file", "*.md"],
-      "message": "chore(release): publish"
+      "ignoreChanges": ["ignored-file", "*.md"]
     },
     "version": {
-      "message": "chore(build): generate new version"
+      "message": "chore(release): publish"
     }
   }
 }
