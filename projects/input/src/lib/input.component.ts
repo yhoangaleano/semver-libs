@@ -2,12 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'lib-input',
-  template: `
-    <p>
-      Input Works!
-    </p>
-  `,
-  styles: [
-  ]
+  template: ` <input type="date" name="inputDate" id="inputDate"> `,
+  styles: [],
 })
 export class InputComponent {}
