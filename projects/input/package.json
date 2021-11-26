@@ -1,6 +1,6 @@
 {
   "name": "input",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "scripts": {
     "build": "ng build input --prod",
     "postpublish": "rm -rf dist/ && rm -rf node_modules/"
