@@ -177,3 +177,6 @@ Con el siguiente comando se genera el login en aws y ademas se generan los build
 - **owner**: AWSID de cuenta de del propietario del dominio.
 - **latest**: Tag con el cual se publicara la librería. Por defecto es latest, segun la documentación tenemos prerelease [en pruebas] o beta [en desarrollo].
 `aws codeartifact login --tool npm --repository [repository] --domain [domain] --domain-owner [owner] --profile publish && lerna publish --contents dist --dist-tag [latest] --yes`
+
+## Generate tag
+`lerna version --conventional-commits`
