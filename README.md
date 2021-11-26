@@ -96,7 +96,7 @@ A continuación vamos a dar un repaso por los archivos de vital importancia para
 		]
 		```
 
-## Verificar archivo tsconfig.json
+## Verificar archivo tsconfig.json
 Para cada una de las librerías que realicemos debemos hacer un cambio para que las podamos usar como dependencia dentro de otra libreria o un proyecto de ejemplo que se puede crear mas adelante. Para esto lo que hacemos es crear las siguientes rutas en la sección de compilerOptions > paths:
 - "button": ["projects/button/dist"],
 - "button/*": ["projects/button/dist/*"],
@@ -104,7 +104,7 @@ Para cada una de las librerías que realicemos debemos hacer un cambio para que 
 
 Más adelante vamos a configurar para que las librerías generen sus distribuciones allí.
 
-## Verificar el archivo lerna.json
+## Verificar el archivo lerna.json
 En este archivo encontramos toda la configuración de lerna y de la cual se basaran todos sus comandos. De lo mas importante acá es lo siguiente:
 - Se especifica que se usa yarn
 - Se especifica que podremos trabajar con dependencia entre librerías y por eso el useWorkspaces
@@ -131,7 +131,7 @@ En este archivo encontramos toda la configuración de lerna y de la cual se basa
 # Archivos a verificar para cada librería
 En esta sección se abordaran los archivos que se deben modificar para cada librería generada
 
-## Verificar archivo package.json
+## Verificar archivo package.json
 Se debe agregar la sección de scripts con el siguiente contenido:
 ```json
 ...
@@ -145,7 +145,7 @@ Estos script se realizan con la intención de:
 - Cuando se ejecuta e comando `lerna publish` este pasa por cada librería y verifica si esta el comando de build para que pueda ser independiente.
 - En el paso siguiente vamos a ver que le diremos a ng-packagr que el bundle de la librería lo genere en la carpeta dist dentro de la librería y no por fuera en la carpeta dist como lo hace angular por defecto.
 
-## Verificar archivo ng-package.json
+## Verificar archivo ng-package.json
 La unica configuración en este archivo, es la propiedad dest, la cual se le especifica que el bundle de la librería lo generara en una carpeta dentro del root de la librería.
 ```json
 {
