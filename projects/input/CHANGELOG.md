@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/yohitan12/semver-libs/compare/input@2.0.1...input@3.0.0) (2021-11-26)
+
+
+### Code Refactoring
+
+* **input:** support multiple types in input ([71df064](https://github.com/yohitan12/semver-libs/commit/71df06431f9c0d41bdd71498466487ffd2e9f217))
+
+
+### BREAKING CHANGES
+
+* **input:** input component support multiple types
+
+
+
+
+
 ## [2.0.1](https://github.com/yohitan12/semver-libs/compare/input@2.0.0...input@2.0.1) (2021-11-26)
 
 **Note:** Version bump only for package input
