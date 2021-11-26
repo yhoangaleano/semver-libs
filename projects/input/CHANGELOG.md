@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.1](https://github.com/yohitan12/semver-libs/compare/input@3.0.0...input@3.0.1) (2021-11-26)
+
+
+### Bug Fixes
+
+* add class property ([ff7a956](https://github.com/yohitan12/semver-libs/commit/ff7a956e8662bb001adf36347b800082dd08f124))
+
+
+
+
+
 # [3.0.0](https://github.com/yohitan12/semver-libs/compare/input@2.0.1...input@3.0.0) (2021-11-26)
 
 
