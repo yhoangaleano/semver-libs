@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'lib-button',
-  template: ` <button>Button Works! {{ label }}</button> `,
+  template: ` <button (click)="showMessage()">Button Works! {{ label }}</button> `,
   styles: [],
 })
 export class ButtonComponent {
@@ -10,5 +10,9 @@ export class ButtonComponent {
 
   constructor() {
     this.label = 'Add';
+  }
+
+  public showMessage(): void {
+    console.log(this.label);
   }
 }
