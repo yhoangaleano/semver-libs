@@ -1,6 +1,10 @@
 {
   "name": "input",
   "version": "0.1.0",
+  "scripts": {
+    "build": "ng build input --prod",
+    "postpublish": "rm -rf dist/ && rm -rf node_modules/"
+  },
   "peerDependencies": {
     "@angular/common": "^12.2.0",
     "@angular/core": "^12.2.0"

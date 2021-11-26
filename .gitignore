@@ -43,3 +43,7 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# Evitar subir las compilaciones realizadas para que lerna las identifique
+**/dist/
+**/node_modules/

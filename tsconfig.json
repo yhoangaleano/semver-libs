@@ -4,14 +4,10 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "button": [
-        "dist/button/button",
-        "dist/button"
-      ],
-      "input": [
-        "dist/input/input",
-        "dist/input"
-      ]
+      "button": ["projects/button/dist"],
+      "button/*": ["projects/button/dist/*"],
+      "input": ["projects/input/dist"],
+      "input/*": ["projects/input/dist/*"]
     },
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
@@ -26,10 +22,7 @@
     "importHelpers": true,
     "target": "es2017",
     "module": "es2020",
-    "lib": [
-      "es2018",
-      "dom"
-    ]
+    "lib": ["es2018", "dom"]
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
