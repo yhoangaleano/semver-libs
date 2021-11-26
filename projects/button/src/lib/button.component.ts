@@ -4,7 +4,7 @@ import { Component, Input } from '@angular/core';
   selector: 'lib-button',
   template: `
     <div [class]="contentClass">
-      <button (click)="showMessage()">Button Works! {{ label }}</button>
+      <button (click)="showMessage()">{{ label }}</button>
     </div>
   `,
   styles: [],
@@ -14,7 +14,7 @@ export class ButtonComponent {
   @Input() contentClass!: string;
 
   constructor() {
-    this.label = 'Add feature';
+    this.label = 'Button label';
   }
 
   public showMessage(): void {
