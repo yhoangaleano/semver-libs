@@ -5,11 +5,10 @@
   "version": "independent",
   "command": {
     "publish": {
-      "conventionalCommits": true,
-      "message": "chore(release): publish"
+      "conventionalCommits": true
     },
     "version": {
-      "push": false
+      "message": "chore(release): publish"
     }
   },
   "ignoreChanges": ["**/__tests__/**", "**/*.test.ts"]
