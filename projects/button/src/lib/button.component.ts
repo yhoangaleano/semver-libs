@@ -13,6 +13,6 @@ export class ButtonComponent {
   }
 
   public showMessage(): void {
-    console.log(this.label);
+    console.log('BREAKING CHANGE: `extends` key in config file is now used for extending other config files');
   }
 }
