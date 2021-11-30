@@ -12,7 +12,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 # Herramientas a trabajar
 Antes de comenzar con las configuraciones del proyecto, vamos a contextualizar un poco acerca de las herramientas que se usuran.
 
-## Semantic Version o SemVer
+## Semantic Version o SemVer
 
 El versionamiento semántico es una especificación o estándar a la hora de definir la versión de un desarrollo, teniendo en cuenta que cada linea de código agregada impacta directamente el número de versión basandose en la naturaleza del cambio que se esta introduciendo. Para esto se definieron 3 tipos de cambios:
 
@@ -34,7 +34,7 @@ Con esta especificación lo que vamos a lograr es estandarizar los mensajes de l
 ## Commitizen [Repositorio de github y documentación](https://github.com/commitizen/cz-cli)
 Commitizen es una CLI que nos ayuda a generar los mensajes de commit siguiendo los [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) con el fin de que puedan ser analizados para determinar la siguiente versión de la librería (la cual la realiza lerna). Este paquete se debe instalar de manera global, puesto que podemos usar git cz en lugar de git commit para confirmar los cambios que realicemos en el desarrollo de nuestras librerías.
 
-## Lerna [Repositorio de github y documentación](https://github.com/lerna/lerna)
+## Lerna [Repositorio de github y documentación](https://github.com/lerna/lerna)
 Copiando textualmente de su documentación lerna es:
 
 > Una herramienta para gestionar proyectos de JavaScript con múltiples paquetes. Dividir grandes bases de código en paquetes separados con versiones independientes es extremadamente útil para compartir el código. Sin embargo, hacer cambios en muchos repositorios es complicado y difícil de seguir, y las pruebas en los repositorios se complican rápidamente. Para resolver estos (y muchos otros) problemas, algunos proyectos organizan sus bases de código en repositorios multipaquete (a veces llamados monorepos). Proyectos como Babel, React, Angular, Ember, Meteor, Jest y muchos otros desarrollan todos sus paquetes dentro de un único repositorio. Lerna es una herramienta que optimiza el flujo de trabajo en torno a la gestión de repositorios multipaquete con git y npm.
