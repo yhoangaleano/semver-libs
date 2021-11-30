@@ -12,7 +12,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Instalar Yarn
 Debemos instalar Yarn para manejar los paquetes y que mas adelante nos permita trabajar con dependencias entre librerías.
-`sudo npm i -g yarn`
+`sudo npm i -g yarn lerna commitizen`
 
 ## Eliminar package-lock.json
 Debemos eliminar el package-lock.json ya que con yarn se crea el archivo yarn.lock
@@ -23,17 +23,22 @@ Debemos eliminar el package-lock.json ya que con yarn se crea el archivo yarn.lo
 Se debe ejecutar el comando para instalar los paquetes con yarn
 `yarn install`
 
-## Instalar las dependencias de desarrollo
-Se deben instalar las siguientes librerías en modo desarrollo
-`yarn add lerna commitizen cz-conventional-changelog husky @commitlint/cli @commitlint/config-conventional -dev`
-
 ## Inicializar un proyecto con lerna
 Para inicializar un proyecto con lerna debemos ejecutar el siguiente comando
 `lerna init --independent`
 
+**Nota**: Lerna por defecto crea una carpeta llamada packages. Esta carpeta la debemos borrar ya que utilizaremos la carpeta que nos recomienda angular llamada projects para ubicar las librerías. Luego de borrar la carpeta, lo que debemos hacer es modificar el archivo lerna.json que se genero y debe quedar de la siguiente manera:
+
+```json
+{
+  "packages": ["projects/*"],
+  "version": "independent"
+}
+```
+
 ## Inicializar commitizen y la convención de mensajes que usaremos
 Para inicialziar el proyecto con commitizen y ademas especificarle cual convención usaremos debemos ejecutar el siguiente comando
-`commitizen init cz-conventional-changelog -D -E`
+`commitizen init cz-conventional-changelog --yarn --dev --exact`
 
 ## Inicializar proyecto con Husky
 Para inicializar un proyecto con Husky para que nos ayude a realizar las verificaciones de los commits y no dejarlo ejecutar si encuentra algún error, debemos ejecutar el siguiente comando
@@ -44,6 +49,10 @@ Para inicializar un proyecto con Husky para que nos ayude a realizar las verific
 
 Agregamos el hook para husky para que este verificando que los mensajes estan correctos
 `npx husky add .husky/commit-msg 'npx --no-install commitlint --edit'`
+
+## Instalar las dependencias de desarrollo
+Se deben instalar las siguientes librerías en modo desarrollo
+`yarn add @commitlint/cli @commitlint/config-conventional --dev`
 
 # Verificar archivos para su correcto funcionamiento
 A continuación vamos a dar un repaso por los archivos de vital importancia para esta configuración.
