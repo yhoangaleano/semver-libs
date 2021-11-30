@@ -109,6 +109,7 @@ A continuación vamos a dar un repaso por los archivos de vital importancia para
 Para cada una de las librerías que realicemos debemos hacer un cambio para que las podamos usar como dependencia dentro de otra libreria o un proyecto de ejemplo que se puede crear mas adelante. Para esto lo que hacemos es crear las siguientes rutas en la sección de compilerOptions > paths:
 - "button": ["projects/button/dist"],
 - "button/\*": ["projects/button/dist/\*"],
+
 **Reemplace button por el nombre de su librería**
 
 Más adelante vamos a configurar para que las librerías generen sus distribuciones allí.
