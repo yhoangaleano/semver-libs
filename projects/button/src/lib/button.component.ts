@@ -4,20 +4,20 @@ import { Component, Input } from '@angular/core';
   selector: 'lib-button',
   template: `
     <div [class]="contentClass">
-      <button (click)="showMessage()">{{ label }}</button>
+      <button (click)="showMessage()">{{ nameButton }}</button>
     </div>
   `,
   styles: [],
 })
 export class ButtonComponent {
-  @Input() label: string;
+  @Input() nameButton: string;
   @Input() contentClass!: string;
 
   constructor() {
-    this.label = 'Button label';
+    this.nameButton = 'Button label';
   }
 
   public showMessage(): void {
-    console.log(this.label);
+    console.log(this.nameButton);
   }
 }
