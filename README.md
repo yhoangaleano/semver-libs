@@ -8,10 +8,52 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 -  [Publish Angular libraries like a Pro](https://medium.com/@hjalmers/publish-angular-libraries-like-a-pro-d6329e1b8ec)
 -  [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
 
+
+# Herramientas a trabajar
+Antes de comenzar con las configuraciones del proyecto, vamos a contextualizar un poco acerca de las herramientas que se usuran.
+
+## Semantic Version o SemVer
+
+El versionamiento semántico es una especificación o estándar a la hora de definir la versión de un desarrollo, teniendo en cuenta que cada linea de código agregada impacta directamente el número de versión basandose en la naturaleza del cambio que se esta introduciendo. Para esto se definieron 3 tipos de cambios:
+
+- Major: Cambio drástico en el software. No es compatible con código hecho en versiones anteriores.
+- Minor: Cambio que añade alguna característica nueva al software o modifica alguna ya existente, pero que sigue siendo compatible con código existente. También cuando marcamos algo como obsoleto.
+- Patch: Cuando arreglamos un bug siendo el cambio retrocompatible.
+
+De esta forma, tenemos un lenguaje común entre desarrolladores e implementadores a la hora de hablar de versiones.
+
+[Basado del sigueinte post](https://blog.armesto.net/que-es-el-versionamiento-semantico-y-por-que-es-importante/)
+
+## Conventional Commits [Documentación](https://www.conventionalcommits.org/en/v1.0.0/)
+Copiando textualmente de su documentación lerna es:
+
+> Conventional Commits es una convención ligera sobre los mensajes de confirmación (commits). Proporciona un conjunto sencillo de reglas para crear un historial explícito de confirmaciones, lo que facilita la escritura de herramientas automatizadas sobre él. Esta convención encaja con SemVer, al describir las características (features), correcciones (fix) y cambios de ruptura (breaking changes) realizados en los mensajes de confirmación.
+
+Con esta especificación lo que vamos a lograr es estandarizar los mensajes de los commit y al mismo tiempo brindar una lectura para las herramientas que vamos a nombrar a continuación.
+
+## Commitizen [Repositorio de github y documentación](https://github.com/commitizen/cz-cli)
+Commitizen es una CLI que nos ayuda a generar los mensajes de commit siguiendo los [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) con el fin de que puedan ser analizados para determinar la siguiente versión de la librería (la cual la realiza lerna). Este paquete se debe instalar de manera global, puesto que podemos usar git cz en lugar de git commit para confirmar los cambios que realicemos en el desarrollo de nuestras librerías.
+
+## Lerna [Repositorio de github y documentación](https://github.com/lerna/lerna)
+Copiando textualmente de su documentación lerna es:
+
+> Una herramienta para gestionar proyectos de JavaScript con múltiples paquetes. Dividir grandes bases de código en paquetes separados con versiones independientes es extremadamente útil para compartir el código. Sin embargo, hacer cambios en muchos repositorios es complicado y difícil de seguir, y las pruebas en los repositorios se complican rápidamente. Para resolver estos (y muchos otros) problemas, algunos proyectos organizan sus bases de código en repositorios multipaquete (a veces llamados monorepos). Proyectos como Babel, React, Angular, Ember, Meteor, Jest y muchos otros desarrollan todos sus paquetes dentro de un único repositorio. Lerna es una herramienta que optimiza el flujo de trabajo en torno a la gestión de repositorios multipaquete con git y npm.
+
+En otras palabras, lerna nos ayudara a identificar el número de **semantic version** con el cual la librería debería publicarse en cierto momento, teniendo en cuenta los commits realizados durante el desarrollo del proyecto y los cuales deben cumplir con una convención especifica. Con lerna tambien gestionaremos la manera en que publicamos la librería y como se resuelven las dependencias entre librerías.
+
+## Conventional Changelog
+Conventional Changelog es una herramienta para generar un CHANGELOG.md a partir de los metadatos de git (mensajes de los commits). Esta herramienta sólo funciona cuando seguimos las reglas de Conventional Commits.
+
+## Husky
+Husky es una herramienta de hooks (funciones que se ejecutan antes o despues de un comando) que nos permitira estar verificando los mensajes de commits que realizamos y detener los malos commits. En otras palabras lo usaremos como un lint de mensajes de commit. Añadiendo un git hook con Husky, podemos ejecutar scripts personalizados en el commit antes de dejarlo pasar.
+
+## Commitlint
+De la mano de Husky va este paquete, el cual usaremos para que después de capturar el commit, comprobemos que el mensaje agregado este usando las convenciones correctas.
+
 # Paso para trabajar con Semantic Version en un WorkSpace de Librerías Angular
 
 ## Instalar Yarn
-Debemos instalar Yarn para manejar los paquetes y que mas adelante nos permita trabajar con dependencias entre librerías.
+YARN es un gestor dependencias de JavaScript, que está enfocado en la velocidad y la seguridad, y a diferencia de otros gestores como NPM, YARN es muy rápido y muy fácil de usar. Además, YARN nos permita trabajar con dependencias entre librerías, lo cual con npm es un poco mas complicado. Debemos instalar Yarn de manera global usando el siguiente comando:
 `sudo npm i -g yarn lerna commitizen`
 
 ## Eliminar package-lock.json
