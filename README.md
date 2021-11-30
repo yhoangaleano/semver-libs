@@ -8,7 +8,6 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 -  [Publish Angular libraries like a Pro](https://medium.com/@hjalmers/publish-angular-libraries-like-a-pro-d6329e1b8ec)
 -  [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
 
-
 # Herramientas a trabajar
 Antes de comenzar con las configuraciones del proyecto, vamos a contextualizar un poco acerca de las herramientas que se usuran.
 
@@ -41,13 +40,13 @@ Copiando textualmente de su documentación lerna es:
 
 En otras palabras, lerna nos ayudara a identificar el número de **semantic version** con el cual la librería debería publicarse en cierto momento, teniendo en cuenta los commits realizados durante el desarrollo del proyecto y los cuales deben cumplir con una convención especifica. Con lerna tambien gestionaremos la manera en que publicamos la librería y como se resuelven las dependencias entre librerías.
 
-## Conventional Changelog
+## Conventional Changelog [Repositorio de github y documentación](https://github.com/conventional-changelog/conventional-changelog)
 Conventional Changelog es una herramienta para generar un CHANGELOG.md a partir de los metadatos de git (mensajes de los commits). Esta herramienta sólo funciona cuando seguimos las reglas de Conventional Commits.
 
-## Husky
+## Husky [Documentación](https://typicode.github.io/husky/#/)
 Husky es una herramienta de hooks (funciones que se ejecutan antes o despues de un comando) que nos permitira estar verificando los mensajes de commits que realizamos y detener los malos commits. En otras palabras lo usaremos como un lint de mensajes de commit. Añadiendo un git hook con Husky, podemos ejecutar scripts personalizados en el commit antes de dejarlo pasar.
 
-## Commitlint
+## Commitlint [Repositorio de github y documentación](https://github.com/conventional-changelog/commitlint)
 De la mano de Husky va este paquete, el cual usaremos para que después de capturar el commit, comprobemos que el mensaje agregado este usando las convenciones correctas.
 
 # Paso para trabajar con Semantic Version en un WorkSpace de Librerías Angular
@@ -220,6 +219,7 @@ Tenga en cuenta que a la hora de dejar los commits, las convenciones usan los si
 - Fix/refactor = patch version bump
 - Feature = minor version bump
 - Breaking changes = major version bump
+
 
 # Publish library changes
 Con el siguiente comando se genera el login en aws y ademas se generan los build para ser publicados teniendo en cuenta los filtros del prepublish.
