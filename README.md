@@ -45,7 +45,7 @@ Para inicializar un proyecto con Husky para que nos ayude a realizar las verific
 `npx husky-init`
 
 **Recomendación**: Al inicializar husky se especifica que siempre antes de hacer el commit se ejecutan los test. Mientras estabilizamos las pruebas recomiendo borrarlo y luego habilitarlo cuando ya se tenga esta configuración.
-- Borrar el comando de ng test del archivo .husky/pre-commit
+- Borrar el comando de npm test del archivo .husky/pre-commit
 
 Agregamos el hook para husky para que este verificando que los mensajes estan correctos
 `npx husky add .husky/commit-msg 'npx --no-install commitlint --edit'`
