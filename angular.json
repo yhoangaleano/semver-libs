@@ -64,6 +64,68 @@
           }
         }
       }
+    },
+    "generic-library": {
+      "projectType": "library",
+      "root": "projects/generic-library",
+      "sourceRoot": "projects/generic-library/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/generic-library/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/generic-library/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/generic-library/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/generic-library/src/test.ts",
+            "tsConfig": "projects/generic-library/tsconfig.spec.json",
+            "karmaConfig": "projects/generic-library/karma.conf.js"
+          }
+        }
+      }
+    },
+    "shared-library": {
+      "projectType": "library",
+      "root": "projects/shared-library",
+      "sourceRoot": "projects/shared-library/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/shared-library/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/shared-library/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/shared-library/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/shared-library/src/test.ts",
+            "tsConfig": "projects/shared-library/tsconfig.spec.json",
+            "karmaConfig": "projects/shared-library/karma.conf.js"
+          }
+        }
+      }
     }
   },
   "defaultProject": "button"

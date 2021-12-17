@@ -4,10 +4,26 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "button": ["projects/button/dist"],
-      "button/*": ["projects/button/dist/*"],
-      "input": ["projects/input/dist"],
-      "input/*": ["projects/input/dist/*"]
+      "button/*": ["projects/button/*", "projects/button"],
+      "button": ["projects/button/dist/*", "projects/button/dist"],
+      "input/*": ["projects/input/*", "projects/input"],
+      "input": ["projects/input/dist/*", "projects/input/dist"],
+      "generic-library/*": [
+        "projects/generic-library/*",
+        "projects/generic-library"
+      ],
+      "generic-library": [
+        "projects/generic-library/dist/*",
+        "projects/generic-library/dist"
+      ],
+      "shared-library/*": [
+        "projects/shared-library/*",
+        "projects/shared-library"
+      ],
+      "shared-library": [
+        "projects/shared-library/dist/*",
+        "projects/shared-library/dist"
+      ]
     },
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
