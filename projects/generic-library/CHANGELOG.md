@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [12.2.1](https://github.com/yohitan12/semver-libs/compare/generic-library@12.2.0...generic-library@12.2.1) (2021-12-17)
+
+
+### Bug Fixes
+
+* **generuc-library:** patch change test ([794a5cb](https://github.com/yohitan12/semver-libs/commit/794a5cb10914e3c42bbb4c49e8cc09218dd73815))
+
+
+
+
+
 # [12.2.0](https://github.com/yohitan12/semver-libs/compare/generic-library@12.1.0...generic-library@12.2.0) (2021-12-17)
 
 

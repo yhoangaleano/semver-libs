@@ -1,6 +1,6 @@
 {
   "name": "generic-library",
-  "version": "12.2.0",
+  "version": "12.2.1",
   "scripts": {
     "build": "ng build generic-library --prod",
     "postpublish": "rm -rf dist/ && rm -rf node_modules/"
