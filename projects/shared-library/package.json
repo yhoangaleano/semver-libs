@@ -1,6 +1,6 @@
 {
   "name": "shared-library",
-  "version": "12.0.0",
+  "version": "12.1.0",
   "scripts": {
     "build": "ng build shared-library --prod",
     "postpublish": "rm -rf dist/ && rm -rf node_modules/"
@@ -13,6 +13,6 @@
     "tslib": "^2.3.0"
   },
   "devDependencies": {
-    "generic-library": "*"
+    "generic-library": "^12.1.0"
   }
 }
