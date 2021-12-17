@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [12.2.0](https://github.com/yohitan12/semver-libs/compare/generic-library@12.1.0...generic-library@12.2.0) (2021-12-17)
+
+
+### Features
+
+* **generic-library:** add new feature ([6068ffb](https://github.com/yohitan12/semver-libs/commit/6068ffba67257d2c0ebc6992f0c25c957e9203f4))
+
+
+
+
+
 # 12.1.0 (2021-12-17)
 
 
