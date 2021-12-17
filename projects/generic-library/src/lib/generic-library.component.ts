@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'lib-generic-library',
   template: `
     <p>
-      generic-library works!
+      generic-library works with dependencies!
     </p>
   `,
   styles: [
